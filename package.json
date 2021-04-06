@@ -1,5 +1,5 @@
 {
-  "name": "mst-react-router",
+  "name": "@mi/mst-react-router",
   "description": "Keep your MobX State Tree state in sync with react-router",
   "main": "dist/mst-react-router.js",
   "types": "./types.d.ts",
