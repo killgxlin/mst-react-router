@@ -1,4 +1,5 @@
 import { reaction } from 'mobx';
+import isEqual from 'lodash/isEqual';
 
 /**
  * Sync the history object with the given mst router store
@@ -9,13 +10,7 @@ export const syncHistoryWithStore = (history, store) => {
   store._setHistory(history);
 
   function isLocationEqual(locationA, locationB) {
-    return (
-      locationA &&
-      locationB &&
-      locationA.key &&
-      locationB.key &&
-      locationA.key === locationB.key
-    );
+    return isEqual(locationA, locationB);
   }
 
   // Handle update from history object
